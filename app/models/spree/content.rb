@@ -12,7 +12,7 @@ class Spree::Content < ActiveRecord::Base
     :default_style => :preview,
     :url           => "/spree/contents/:id/:style/:basename.:extension",
     :path          => ":rails_root/public/spree/contents/:id/:style/:basename.:extension"
-  
+
   cattr_reader :per_page
   @@per_page = 10
 
@@ -40,7 +40,7 @@ class Spree::Content < ActiveRecord::Base
   end
 
   def rendered_body
-    RDiscount.new(body.to_s).to_html.html_safe
+    body.html_safe
   end
 
   def default_attachment_sizes
