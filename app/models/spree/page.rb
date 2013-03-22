@@ -69,6 +69,6 @@ class Spree::Page < ActiveRecord::Base
     def create_default_content
       self.contents.create(:title => title)
     end
-  		
+
 end
   

@@ -1,8 +1,9 @@
-<p>
+<%= form.field_container :attachment do %>
   <%= form.label :attachment %>:<br/>
   <%= form.file_field :attachment %>
-</p>
-<p>
+<% end %>
+
+<%= form.field_container :alt do %>
   <%= form.label :alt %>:<br/>
   <%= form.text_field :alt, :class => 'text' %>
-</p>
+<% end %>
