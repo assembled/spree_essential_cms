@@ -29,6 +29,13 @@
   <%= error_message_on :page, :accessible %>
 <% end %>
 
+<%= form.field_container :css do %>
+  <%= form.label :css, t('page.css') %><br />
+  <%= form.text_area :css, :class => "text"  %>
+  <%= error_message_on :page, :css %>
+<% end %>
+
+
 <div id="field_path">
 
   <%= form.field_container :path do %>
